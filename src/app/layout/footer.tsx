@@ -10,7 +10,7 @@ import {
   Typography,
   colors,
 } from '@mui/material';
-import { Home, Assignment, Flag } from '@mui/icons-material';
+import { Home, Assignment, Flag, Style } from '@mui/icons-material';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 
@@ -18,9 +18,9 @@ export function Footer() {
   const pathname = usePathname();
 
   const footerButtonsList = [
-    { label: 'トップ', icon: <Home />, link_to: '/home' },
-    { label: '記録一覧', icon: <Assignment />, link_to: '/record' },
-    { label: '目標設定', icon: <Flag />, link_to: '/goal' },
+    { label: 'トップ', icon: <Home sx={{color: 'white'}} />, link_to: '/home', },
+    { label: '記録一覧', icon: <Assignment sx={{color: 'white'}} />, link_to: '/record' },
+    { label: '目標設定', icon: <Flag sx={{color: 'white'}} />, link_to: '/Target' },
   ];
 
   const footerButtons = footerButtonsList.map((elm) => {
@@ -38,7 +38,7 @@ export function Footer() {
         key={elm.label}
         value={elm.link_to}
         label={
-          <Typography fontSize={14} marginX={'-10px'}>
+          <Typography fontSize={14} marginX={'-10px'} sx={{color: 'white'}}>
             {elm.label}
           </Typography>
         }

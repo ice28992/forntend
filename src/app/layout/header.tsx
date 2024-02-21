@@ -12,7 +12,7 @@ export function Header() {
       sx={{ px: '20px', bgcolor: '#68a4d9' }}
       height="80px"
     >
-      <Typography fontSize={30} color="white">
+      <Typography sx={{fontSize: '30px', color: "white"}}>
         スキー記録  
       </Typography>
       <IconButton />
